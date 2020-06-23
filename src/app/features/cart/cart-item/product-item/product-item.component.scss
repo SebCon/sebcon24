@@ -1,0 +1,23 @@
+.product__item__container {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CACFD2;
+    img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .title, .price {
+        font-weight: bold;
+        line-height: 50px;
+        text-align: right;
+    }
+
+    .description {
+        font-size: 85%;
+        line-height: 50px;
+    }
+
+    .remove {
+        min-height: 20px;
+    }
+}

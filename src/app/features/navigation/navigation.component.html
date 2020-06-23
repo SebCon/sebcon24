@@ -1,0 +1,23 @@
+<nav class="row">
+    <div class="col-sm-4">
+        <div class="tile blue">
+            <div class="inner_tile">
+                <a [routerLink]="['/produkte']" [routerLinkActive]="'active'">Produkte</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="tile green">
+            <div class="inner_tile">
+                <a routerLink="/suche" routerLinkActive="active">Suche</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="tile red">
+            <div class="inner_tile">
+                <a routerLink="/warenkorb" routerLinkActive="active">Warenkorb</a>
+            </div>
+        </div>
+    </div>
+</nav>

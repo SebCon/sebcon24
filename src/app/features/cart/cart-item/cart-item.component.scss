@@ -1,0 +1,22 @@
+.cart__item__container {
+    margin: 10px 0px;
+    border: 1px solid #F0F0F0;
+    padding: 20px 40px;
+    background-color: #F8F8F8;
+    border-radius: 6px;
+    position: relative;
+    min-height: 510px;
+
+    .status {
+        padding: 5px 20px;
+        color: #fff;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .order__button {
+        padding: 4px 20px;
+        width: 100%;
+    }
+}

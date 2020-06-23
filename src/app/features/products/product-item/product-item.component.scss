@@ -1,0 +1,27 @@
+.product__list {
+    margin: 10px 0px;
+    border: 1px solid #F0F0F0;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 6px;
+
+    .cart--full {
+        font-style: italic;
+        font-size: 90%;
+        background-color: #DCDCDC;
+        padding: 6px 10px;
+    }
+
+    .more {
+        min-height: 10px;
+        border-top: 1px solid #CACFD2;
+        text-align: center;
+
+        .more__button {
+            display: inline-block;
+            background-color: #CACFD2;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+    }
+}

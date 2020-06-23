@@ -1,0 +1,26 @@
+<div class="product__list row" *ngIf="product">
+    <div class="col-sm-2">
+            <img [src]="product?.image">
+    </div>
+    <div class="col-sm-10">
+            <div class="row">
+                    <div class="col-sm-12"><h3>{{product?.title | uppercase}}</h3></div>
+                    <div class="col-sm-12">
+                            <p>{{product?.descriptionShort}}</p>
+                        </div>
+                    <div class="col-sm-6">
+                            <p>Menge: {{product?.amount}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                            <p>Preis: {{product?.price | calculateEuro:product?.currency | currency:'EUR'}}</p>
+                    </div>
+                    <div class="col-sm-12">
+                            <p>
+                                {{product?.descriptionLong}} {{product?.descriptionLong}} {{product?.descriptionLong}} {{product?.descriptionLong}}
+                            </p>
+                    </div>
+            </div>
+    </div>
+    <a routerLink="../../">zurück</a>
+</div>
+

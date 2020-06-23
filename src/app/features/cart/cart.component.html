@@ -1,0 +1,9 @@
+<div *ngIf="orders && orders.length > 0; else alternativText" class="cart__container">
+    <div *ngFor="let order of orders.reverse(); trackBy trackByOrderId">
+        <app-cart-item [order]="order" [productCount]="order?.products?.length" [totalOfOrder]="getTotal(order?.id)"></app-cart-item>
+    </div>
+</div>
+
+<ng-template #alternativText>
+    <p class="info__text">Es konnten keine Bestellungen und Warenkörbe geladen werden.</p>
+</ng-template>

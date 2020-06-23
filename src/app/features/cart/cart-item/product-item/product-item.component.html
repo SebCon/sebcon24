@@ -1,0 +1,25 @@
+<div class="row product__item__container">
+  <div class="col-sm-1">
+    <button
+      class="remove"
+      (click)="removeProductClick(product)"
+      [disabled]="disabled"
+    >
+      <fa-icon [icon]="faTrashAlt"></fa-icon>
+    </button>
+  </div>
+  <div class="col-sm-2">
+    <img [src]="product?.image" alt="product?.title" title="product?.title" />
+  </div>
+  <div class="col-sm-3 link" [routerLink]="['product-detail', product?.id]">
+    <p class="title">{{ product?.title }}</p>
+  </div>
+  <div class="col-sm-4 link" [routerLink]="['product-detail', product?.id]">
+    <p class="description">{{ product?.descriptionShort }}</p>
+  </div>
+  <div class="col-sm-2">
+    <p class="price">
+      {{ product?.price | calculateEuro: product?.currency | currency: "EUR" }}
+    </p>
+  </div>
+</div>

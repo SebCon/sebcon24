@@ -1,0 +1,56 @@
+<div class="product__list row" appChangeBorder>
+  <div class="col-sm-2">
+    <img id="product__image" [src]="product?.image" />
+  </div>
+  <div class="col-sm-10">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>{{ product?.title | uppercase }}</h3>
+      </div>
+      <div class="col-sm-12">
+        <p id="product__descriptionShort">{{ product?.descriptionShort }}</p>
+      </div>
+      <div class="col-sm-4">
+        <p id="product__amount">Menge: {{ product?.amount }}</p>
+      </div>
+      <div class="col-sm-4">
+        <p id="product__price">
+          Preis:
+          {{
+            product?.price | calculateEuro: product?.currency | currency: "EUR"
+          }}
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div *ngIf="!isGreaterThenMaxOrderCount; else CartIsFull">
+          <button
+            (click)="addProductToCart.emit(product)"
+            [disabled]="isGreaterThenMaxOrderCount"
+          >
+            <fa-icon [icon]="faCartPlus"></fa-icon>
+            In den Warenkorb
+          </button>
+        </div>
+        <ng-template #CartIsFull>
+          <span class="cart--full">Warenkorb ist voll!</span>
+        </ng-template>
+      </div>
+      <div class="col-sm-12">
+        <div class="more">
+          <div
+            class="more__button"
+            (click)="showLongDescription = !showLongDescription"
+          >
+            <fa-icon
+              [icon]="showLongDescription ? faCaretUp : faCaretDown"
+            ></fa-icon>
+          </div>
+        </div>
+        <p *ngIf="showLongDescription">
+          {{ product?.descriptionLong }} {{ product?.descriptionLong }}
+          {{ product?.descriptionLong }} {{ product?.descriptionLong }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

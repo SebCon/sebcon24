@@ -1,0 +1,37 @@
+nav {
+    margin-top: 20px;
+
+    .tile {
+        text-align: center;
+        font-size: 150%;
+
+        &.blue {
+            background-color: #3498DB;
+        }
+    
+        &.green {
+            background-color: #16A085;
+        }
+    
+        &.red {
+            background-color: #E74C3C;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        .inner_tile {
+            padding: 20px;
+
+            a {
+                color: #fff !important;
+            }
+
+            .active {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}

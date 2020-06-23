@@ -1,0 +1,18 @@
+.address_container {
+    margin: 10px 0px;
+    border: 1px solid #F0F0F0;
+    padding: 50px 40px 20px 40px;
+    background-color: #F8F8F8;
+    border-radius: 6px;
+    position: relative;
+    min-height: 510px;
+
+    .info {
+        padding: 5px 20px;
+        background-color: #505050;
+        color: #fff;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}

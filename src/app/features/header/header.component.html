@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="row">
+            <div class="col-sm-2">
+                <app-header-logo></app-header-logo>
+            </div>
+            <div class="col-sm-8">
+                <app-header-title [title]="'InterShop sebcon24'"></app-header-title>
+            </div>
+            <div class="col-sm-2">
+                <app-warenkorb [count]="getCartCount()" [total]="getTotal()"></app-warenkorb> 
+            </div>
+    </div>
+</div>

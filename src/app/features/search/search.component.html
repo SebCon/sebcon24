@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-sm-12">
+        <input [(ngModel)]="searchValue" type="text" placeholder="Suche nach...">
+    </div>
+</div>
+
+<app-products [filterString]="searchValue"></app-products>
+

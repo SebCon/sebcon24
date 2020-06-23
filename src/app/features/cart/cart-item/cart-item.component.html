@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm-12" *ngIf="showAdressForm">
+    <app-address-form (saveAddress)="onSaveAddress($event)"></app-address-form>
+  </div>
+  <div class="col-sm-12" *ngIf="!showAdressForm">
+    <div
+      class="cart__item__container"
+      [style.opacity]="!showOrderButton(order?.status) ? 0.5 : 1"
+    >
+      <div style="min-height: 20px;">
+        <span class="status" [style.backgroundColor]="status?.color">{{
+          status?.info
+        }}</span>
+      </div>
+      <div class="detail">
+        <div *ngFor="let product of order?.products; trackBy: trackbyProductId">
+          <app-product-item
+            [product]="product"
+            [disabled]="!showOrderButton(order?.status)"
+            (removeProduct)="onRemoveProduct($event)"
+          >
+          </app-product-item>
+        </div>
+      </div>
+      <div class="text-right">
+        <p>
+          {{ productCount }} Produkte für insgesamt
+          <strong>{{ totalOfOrder | currency: "EUR" }}</strong>
+        </p>
+      </div>
+      <div *ngIf="showOrderButton(order?.status)">
+        <button class="order__button" (click)="completeOrder()">
+          Bestellen
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

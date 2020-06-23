@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p class="searchResult">
+      <span *ngIf="filterString; else listingAll"
+        >Suchergebnisse: <strong>{{ resultCount }}</strong></span
+      >
+      <ng-template #listingAll>
+        <span
+          >Produktanzahl <strong>{{ resultCount }}</strong></span
+        >
+      </ng-template>
+    </p>
+  </div>
+</div>
+<div *ngIf="products$ | async; else alternativText">
+  <div *ngFor="let product of products$ | async; trackBy: trackByProductId">
+    <app-product-item
+      [product]="product"
+      [isGreaterThenMaxOrderCount]="checkIsGreaterThenMaxOrderCount()"
+      (addProductToCart)="onAddProductToCart($event)"
+    >
+    </app-product-item>
+  </div>
+</div>
+
+<ng-template #alternativText>
+  <span class="no-products">Es konnten keine Produkte geladen werden.</span>
+</ng-template>
