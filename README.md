@@ -11,11 +11,11 @@ This is the Angular example application of the book [Angular - Programmieren fü
 
 Here you can see the product list.
 
-![sebcon24 product listing](../screens/sebcon24-produkte-overview.png)
+![sebcon24 product listing](https://github.com/SebCon/sebcon24/blob/master/screens/sebcon24-produkte-overview.png)
 
 And here the shopping cart with two order items.
 
-![sebcon24 basket listing](../screens/sebcon24-warenkorb-overview.png)
+![sebcon24 basket listing](https://github.com/SebCon/sebcon24/blob/master/screens/sebcon24-warenkorb-overview.png)
 
 ## Technical Stuff
 
