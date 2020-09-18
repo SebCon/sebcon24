@@ -1,3 +1,5 @@
+**the __examples__ for the corresponding chapters can be found here [https://github.com/SebCon/angular-buch-beispiele](https://github.com/SebCon/angular-buch-beispiele)**
+
 # Sebcon24
 
 This is the Angular example application of the book [Angular - Programmieren für Einsteiger](https://www.angular-buch.net), called _sebcon24_. It's a basic ecommerce plattform, where you can:
